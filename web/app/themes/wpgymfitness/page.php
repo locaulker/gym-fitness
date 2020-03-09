@@ -1,23 +1,7 @@
 <?php get_header(); ?>
 
-<main class="container page section">
-  <?php while (have_posts()) : the_post(); ?>
-
-  <h1 class="text-center text-primary">
-    <?php the_title(); ?>
-  </h1>
-
-  <?php
-    if(has_post_thumbnail()) : the_post_thumbnail('blog');
-    else : echo "<p>No Featured Image Exists</p>";
-    endif;
-  ?>
-
-  <div class="text-center">
-    <?php the_content(); ?>
-  </div>
-
-  <?php endwhile; ?>
+<main class="container page section no-sidebars">
+  <?php get_template_part('template-parts/page', 'loop'); ?>
 </main>
 
 <?php get_footer(); ?>

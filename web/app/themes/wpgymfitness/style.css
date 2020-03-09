@@ -88,6 +88,15 @@ h3 {
 }
 
 /* UTILITIES */
+.text-center {
+  text-align: center;
+}
+.text-primary {
+  color: var(--primary);
+}
+.section {
+  padding: 5rem 0;
+}
 
 /* HEADER */
 .logo {
@@ -209,5 +218,32 @@ h3 {
 @media (min-width: 768px) {
   .copyright {
     flex: 0 0 auto;
+  }
+}
+
+/* DEFAULT PAGE TEMPLATE */
+.featured-image {
+  margin-bottom: 3rem;
+  /* margin-top: 3rem; */
+}
+.page h1 {
+  margin-bottom: 4rem;
+}
+.page.no-sidebars {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* PAGE WITH SIDEBAR */
+@media (min-width: 768px) {
+  .page.with-sidebar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .with-sidebar .page-content {
+    flex: 0 0 calc(60% - 2rem);
+  }
+  .with-sidebar .sidebar {
+    flex: 0 0 calc(40% - 2rem);
   }
 }
