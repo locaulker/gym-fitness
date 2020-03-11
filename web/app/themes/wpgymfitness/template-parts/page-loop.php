@@ -12,7 +12,20 @@
     ]
   );
   endif;
-?>
+
+  // Check current post type
+  if( get_post_type() === 'gymfitness_classes' ) :
+
+ 
+  $start_time = get_field('start_time');
+  $end_time = get_field('end_time');
+  ?>
+
+<p class="content-class">
+  <?php echo the_field('class_days') . " &ndash; " . $start_time . " to " . $end_time ?>
+</p>
+
+<?php endif; ?>
 
 <?php the_content(); ?>
 <?php endwhile; ?>

@@ -1,5 +1,8 @@
 <?php
 
+// Link to the query files
+require get_template_directory() . '/inc/queries.php';
+
 // Create WP Hook that calls WP MeMENUS
 function gymfitness_menus() {
 
