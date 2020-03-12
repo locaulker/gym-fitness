@@ -15,7 +15,6 @@
         All Rights Reserved.
         <?php echo get_bloginfo('name') . " &ndash; " . date('Y'); ?>
       </p>
-
     </div>
   </footer>
 

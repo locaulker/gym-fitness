@@ -1,31 +1,27 @@
 <?php while (have_posts()) : the_post(); ?>
 
-<h1 class="text-center text-primary">
-  <?php the_title(); ?>
-</h1>
+  <h1 class="text-center text-primary"><?php the_title(); ?></h1>
 
-<?php
-  if(has_post_thumbnail()) : the_post_thumbnail(
-    'blog',
-    [ 
-      'class' => 'featured-image'
-    ]
-  );
-  endif;
+  <?php
+    if(has_post_thumbnail()) : the_post_thumbnail(
+      'blog',
+      [ 
+        'class' => 'featured-image'
+      ]
+    );
+    endif;
 
-  // Check current post type
-  if( get_post_type() === 'gymfitness_classes' ) :
+    // Check and apply current post type
+    if( get_post_type() === 'gymfitness_classes' ) :
+      $start_time = get_field('start_time');
+      $end_time = get_field('end_time');
+    ?>
 
- 
-  $start_time = get_field('start_time');
-  $end_time = get_field('end_time');
-  ?>
-
-<p class="content-class">
-  <?php echo the_field('class_days') . " &ndash; " . $start_time . " to " . $end_time ?>
-</p>
+  <p class="content-class">
+    <?php echo the_field('class_days') . " &ndash; " . $start_time . " to " . $end_time ?>
+  </p>
 
 <?php endif; ?>
 
-<?php the_content(); ?>
+  <?php the_content(); ?>
 <?php endwhile; ?>
