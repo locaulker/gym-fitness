@@ -450,3 +450,60 @@ p.content-class {
     grid-row: 2 / 4;
   }
 }
+
+/* CONTACT FORM */
+.wpcf7-form p {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wpcf7-form p label,
+.wpcf7-form p span {
+  flex: 0 0 100%;
+}
+.wpcf7-form p span {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wpcf7-form-control {
+  flex: 0 0 100%;
+  border: 1px solid var(--lightGray);
+  padding: 1rem;
+}
+.wpcf7-submit {
+  background-color: var(--primary);
+  font-size: 2rem;
+  font-family: var(--mainFont);
+  letter-spacing: 0.5rem;
+  font-weight: normal;
+  color: var(--white);
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+}
+.wpcf7-submit:hover {
+  cursor: pointer;
+  background-color: var(--darkGray);
+}
+div.wpcf7-validation-errors {
+  color: red;
+  border: 1px solid var(--primary);
+  text-align: center;
+}
+div.wpcf7 .ajax-loader {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 4rem;
+  width: 4rem;
+}
+/* span.wpcf7-not-valid-tip {
+  background-color: red;
+  color: var(--white);
+  padding: 1rem;
+} */
+div.wpcf7-mail-sent-ok {
+  padding: 1rem;
+}
+
+/* LEAFLETJS MAP */
+#map {
+  height: 300px;
+}
