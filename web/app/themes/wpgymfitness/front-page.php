@@ -75,5 +75,16 @@
     </div>
   </section>
 
+  <!-- Section: Instructors -->
+  <section class="instructors">
+    <div class="container section">
+      <h2 class="text-center">Our Instructors</h2>
+      <p class="text-center"><?php the_field('instructors_section_subtitle') ?></p>
+
+      <?php gymfitness_instructors_list(); ?>
+
+    </div>
+  </section>
+
   <?php endwhile ?>
 <?php get_footer(); ?>
