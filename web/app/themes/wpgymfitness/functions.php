@@ -66,6 +66,9 @@ function gymfitness_setup() {
   // To enable featured image support
   add_theme_support('post-thumbnails');
 
+  // Adds SEO friendly Title to each page
+  add_theme_support('title-tag');
+
 }
 add_action('after_setup_theme', 'gymfitness_setup');
 

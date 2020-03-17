@@ -137,8 +137,27 @@ h3 {
   .navigation-bar {
     display: flex;
     justify-content: space-between;
+    transition: all 0.4s ease;
+  }
+
+  .fixed-top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--darkGray);
+    z-index: 1000;
+    padding: 1rem 5rem;
+  }
+  .fixed-top img {
+    width: 12rem;
+  }
+  .fixed-top .main-menu a {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
   }
 }
+
 .classes-homepage {
   background-color: var(--lightGray);
 }
